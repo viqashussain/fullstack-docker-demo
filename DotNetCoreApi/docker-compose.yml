@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  dotnetcoreapi:
+    container_name: 'dotnetcoreapi'
+    ports:
+      - '5000:80'
+    networks:
+      - sql
+    build:
+      context: .
+      dockerfile: DotNetCoreApi/Dockerfile
+    depends_on:
+      - db
+    command: bash -c "echo sleep wait a bit till the db is up and running before attempting to create the Allready DB && sleep 7 && /opt/mssql-tools/bin/sqlcmd -S db,1433 -U sa -P Xx12Xxxxx12 -Q 'create database AllReady'"
+  db:
+    container_name: 'db'
+    image: 'mcr.microsoft.com/mssql/server'
+    networks:
+      - sql
+    environment:
+      SA_PASSWORD: 'Xx12Xxxxx12'
+      ACCEPT_EULA: 'Y'
+    ports:
+      - '1444:1433'
+    volumes:
+      - database:/var/opt/mssql
+networks:
+  sql:
+volumes:
+  database:
