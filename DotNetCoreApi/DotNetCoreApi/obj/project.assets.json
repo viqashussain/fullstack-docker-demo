@@ -12168,11 +12168,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\DotNetCoreApi\\DotNetCoreApi\\DotNetCoreApi.csproj",
+      "projectUniqueName": "C:\\GIT\\fullstack-docker-demo\\DotNetCoreApi\\DotNetCoreApi\\DotNetCoreApi.csproj",
       "projectName": "DotNetCoreApi",
-      "projectPath": "C:\\Git\\DotNetCoreApi\\DotNetCoreApi\\DotNetCoreApi.csproj",
+      "projectPath": "C:\\GIT\\fullstack-docker-demo\\DotNetCoreApi\\DotNetCoreApi\\DotNetCoreApi.csproj",
       "packagesPath": "C:\\Users\\viqas\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\DotNetCoreApi\\DotNetCoreApi\\obj\\",
+      "outputPath": "C:\\GIT\\fullstack-docker-demo\\DotNetCoreApi\\DotNetCoreApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
