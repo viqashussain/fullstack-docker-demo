@@ -8,3 +8,8 @@ DotNetCoreApi/.vs/DotNetCoreApi/v15/Server/sqlite3/storage.ide-wal
 DotNetCoreApi/.vs/DotNetCoreApi/v15/.suo
 DotNetCoreApi/.vs/DotNetCoreApi/v15/Server/sqlite3/storage.ide-shm
 DotNetCoreApi/DotNetCoreApi/obj/Debug/netcoreapp2.2/DotNetCoreApi.csproj.FileListAbsolute.txt
+/react-app/build/
+/react-app/node_modules/
+/.vs/DotNetCoreApi/v15/Server/sqlite3/
+/DotNetCoreApi/obj/
+/DotNetCoreApi/bin/
