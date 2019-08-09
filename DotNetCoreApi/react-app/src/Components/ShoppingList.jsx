@@ -81,7 +81,7 @@ export class ShoppingList extends Component {
     render() {
         return (
             <div>
-                <div show={this.state.isLoading} className="spinner"></div>
+                {this.state.isLoading ? (<div className="spinner"></div>) : ('')}
                 <table className="table">
                     <thead>
                         <tr>
