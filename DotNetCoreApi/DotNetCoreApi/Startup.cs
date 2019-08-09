@@ -27,6 +27,8 @@ namespace DotNetCoreApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
@@ -49,7 +51,12 @@ namespace DotNetCoreApi
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+                .AllowAnyOrigin());
+
             app.UseMvc();
 
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
