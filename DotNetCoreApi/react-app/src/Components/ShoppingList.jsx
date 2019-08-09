@@ -53,7 +53,7 @@ export class ShoppingList extends Component {
             })
             .finally(() => {
                 this.setState({
-                    // isLoading: false
+                    isLoading: false
                 })
             });;
     }
