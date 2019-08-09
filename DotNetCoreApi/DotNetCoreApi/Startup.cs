@@ -36,6 +36,11 @@ namespace DotNetCoreApi
             services.AddDbContext<DataContext>
             (options => options
                 .UseSqlServer(connectionString));
+
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "build";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +56,9 @@ namespace DotNetCoreApi
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
+
             app.UseCors(x => x
                 .AllowAnyMethod()
                 .AllowAnyHeader()
@@ -58,6 +66,12 @@ namespace DotNetCoreApi
                 .AllowAnyOrigin());
 
             app.UseMvc();
+
+            app.UseSpa(spa =>
+            {
+                if (env.IsProduction())
+                    spa.Options.SourcePath = "build";
+            });
 
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
                 .CreateScope())

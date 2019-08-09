@@ -1,6 +1,10 @@
 DotNetCoreApi/DotNetCoreApi/obj/Debug/netcoreapp2.2/DotNetCoreApi.assets.cache
 DotNetCoreApi/node_modules
-DotNetCoreApi/DotNetCoreApi/obj
-DotNetCoreApi/DotNetCoreApi/bin
+DotNetCoreApi/DotNetCoreApi/obj/*
+DotNetCoreApi/DotNetCoreApi/bin/*
 /DotNetCoreApi/DotNetCoreApi/DotNetCoreApi.csproj.user
 /DotNetCoreApi/DotNetCoreApi/obj/Debug/netcoreapp2.2/DotNetCoreApi.csproj.CoreCompileInputs.cache
+DotNetCoreApi/.vs/DotNetCoreApi/v15/Server/sqlite3/storage.ide-wal
+DotNetCoreApi/.vs/DotNetCoreApi/v15/.suo
+DotNetCoreApi/.vs/DotNetCoreApi/v15/Server/sqlite3/storage.ide-shm
+DotNetCoreApi/DotNetCoreApi/obj/Debug/netcoreapp2.2/DotNetCoreApi.csproj.FileListAbsolute.txt
