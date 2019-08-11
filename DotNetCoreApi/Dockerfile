@@ -1,7 +1,5 @@
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
 FROM node:12.2.0-alpine as react-build
 WORKDIR /react-app
